@@ -1,33 +1,127 @@
 import mlflow
-from mlflow import log_metric, log_param, log_artifact
+import mlflow.keras
 
-import pandas as pd
 import numpy as np
+import pandas as pd
+import random
 
 import keras
+import tensorflow as tf
+from keras import backend as K
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
 
+import warnings
+warnings.filterwarnings("ignore")
 
-X_train = np.array([[1, 2, 3], [2, 4, 1], [4, 2, 1], [5, 3, 2]])
-y_train = np.array([1, 0, 1, 0])
+
+def recall(true, pred):
+    """
+
+    :param true:
+    :param pred:
+    :return:
+    """
+    true_positives = K.sum(K.round(K.clip(true * pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(true, 0, 1)))
+    return true_positives/(possible_positives + K.epsilon())
 
 
-model = Sequential([
-    Dense(64, activation="relu", input_shape=(3,)),
-    Dense(64, activation="relu"),
-    Dense(1, activation="sigmoid")
-])
+def precision(true, pred):
+    """
 
-P1 = 0.001
+    :param true:
+    :param pred:
+    :return:
+    """
+    true_positives = K.sum(K.round(K.clip(true * pred, 0, 1)))
+    predicted_positives = K.sum(K.round(K.clip(pred, 0, 1)))
+    return true_positives/(predicted_positives + K.epsilon())
 
-model.compile(optimizer=RMSprop(lr=P1),
-              loss="binary_crossentropy",
-              metrics=["accuracy"])
 
-model.fit(X_train, y_train, batch_size=1, epochs=5, verbose=1)
+def f1(true, pred):
+    """
+
+    :param true:
+    :param pred:
+    :return:
+    """
+    precision_val = precision(true, pred)
+    recall_val = recall(true, pred)
+    return 2 * ((precision_val * recall_val)/(precision_val + recall_val + K.epsilon()))
+
+
+def random_data(size):
+    """
+
+    :param size:
+    :return:
+    """
+    return np.random.random((size, 20)), np.random.randint(2, size=(size, 1))
+
+
+def binary_model(dim):
+    """
+
+    :param dim: dimensions of the input into model
+    :return:
+    """
+    mdl = Sequential([
+        Dense(64, activation="relu", input_dim=dim),
+        Dropout(0.2),
+        Dense(64, activation="relu"),
+        Dropout(0.2),
+        Dense(1, activation="sigmoid")
+    ])
+    return mdl
+
+
+def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
+    """
+
+    :param mdl:
+    :param train_x: training features
+    :param train_y: training labels
+    :param valid_x: validation features
+    :param valid_y: validation labels
+    :param p1: hyperparameter 1 (learning rate)
+    :param p2: hyperparameter 2 (batch size)
+    :param p3: hyperparameter 3 (epochs)
+    :return:
+    """
+    mdl.compile(optimizer=RMSprop(lr=p1),
+                loss="binary_crossentropy",
+                metrics=["accuracy", recall, precision, f1])
+
+    with mlflow.start_run():
+        hist = mdl.fit(train_x, train_y, batch_size=p2, epochs=p3,
+                       verbose=1, validation_data=(valid_x, valid_y))
+        mlflow.log_param("learning_rate", p1)
+        mlflow.log_param("batch_size", p2)
+        mlflow.log_param("epochs", p3)
+        metrics = ["accuracy", "recall", "precision", "f1", "val_accuracy", "val_recall", "val_precision", "val_f1"]
+        for metric in metrics:
+            for step in range(len(hist.history[metric])):
+                mlflow.log_metric(metric, hist.history[metric][step], step=step+1)
+        mlflow.keras.log_model(mdl, "model")
+
+    return hist.history
 
 
 if __name__ == "__main__":
-    pass
+
+    data = pd.read_csv("data.csv")
+    training_experiments = 20
+
+    for iteration in range(1, training_experiments+1):
+        print("Training iteration: " + str(iteration))
+        P1 = random.random()   # learning rate
+        P2 = random.randint(1, 1000)   # batch size
+        P3 = random.randint(1, 50)     # epochs
+
+        #x_train, y_train = random_data(1000)
+        #x_validation, y_validation = random_data(300)
+        model = binary_model(x_train.shape[1])
+        history = train_and_log(model, x_train, y_train, x_validation, y_validation, P1, P2, P3)
+        print("Training iteration completed.")

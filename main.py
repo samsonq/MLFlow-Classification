@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 
 def binary_model(dim):
     """
-    Builds a simple binary classification neural network
+    Builds a simple binary classification neural network.
     :param dim: dimensions of the input into model
     :return: binary classification model
     """
@@ -33,10 +33,11 @@ def binary_model(dim):
 
 def recall(y_true, y_pred):
     """
-
-    :param y_true:
-    :param y_pred:
-    :return:
+    Calculates recall metric through true positive rates based on
+    true values and predictions.
+    :param y_true: true labels
+    :param y_pred: predicted labels
+    :return: recall score
     """
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
@@ -45,10 +46,11 @@ def recall(y_true, y_pred):
 
 def precision(y_true, y_pred):
     """
-
-    :param y_true:
-    :param y_pred:
-    :return:
+    Calculates precision metric through true positive rates based on
+    true values and predictions.
+    :param y_true: true labels
+    :param y_pred: predicted labels
+    :return: precision score
     """
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
@@ -57,10 +59,11 @@ def precision(y_true, y_pred):
 
 def f1(y_true, y_pred):
     """
-
-    :param y_true:
-    :param y_pred:
-    :return:
+    Calculates f1 score based on the precision and recall metrics of the
+    true values and predictions.
+    :param y_true: true labels
+    :param y_pred: predicted labels
+    :return: f1 score
     """
     precision_val = precision(y_true, y_pred)
     recall_val = recall(y_true, y_pred)
@@ -101,10 +104,10 @@ def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
     return hist.history
 
 
-def preprocessing(df):
+def preprocess(df):
     """
-    Preprocess and clean data to transform into training and validation sets.
-    :param df: dataframe to prepare
+    Preprocess and clean titanic data to transform into training and validation sets.
+    :param df: titanic dataframe to prepare
     :returns: tensors of training and validation data
     """
     df.drop(labels=["Name", "Cabin", "Ticket"], axis=1, inplace=True)
@@ -136,10 +139,10 @@ def preprocessing(df):
 
 if __name__ == "__main__":
 
-    data = pd.read_csv("data.csv")
+    data = pd.read_csv("titanic.csv")
     training_experiments = 20
 
-    x_train, x_validation, y_train, y_validation = preprocessing(data)
+    x_train, x_validation, y_train, y_validation = preprocess(data)
 
     for iteration in range(1, training_experiments+1):
         print("Training iteration: " + str(iteration))

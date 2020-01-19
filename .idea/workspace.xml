@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa37b913-472b-48ea-af6a-e0887c6f99f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/08ec555e065c4df8a1096833dfbaab67/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/08ec555e065c4df8a1096833dfbaab67/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/288d568a46db48b2bdf3fecf76096e3b/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/288d568a46db48b2bdf3fecf76096e3b/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/2ee1abda975345f7818cde1701230862/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/2ee1abda975345f7818cde1701230862/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/2ef79d9b3b774a1ab507e6c16397a10c/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/2ef79d9b3b774a1ab507e6c16397a10c/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/3db4cc35e6be4e3ca5c1e9ef7e9a15d3/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/3db4cc35e6be4e3ca5c1e9ef7e9a15d3/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/5ffb38cedbc549eba93094fccedf8caf/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/5ffb38cedbc549eba93094fccedf8caf/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/772c12465a99490eb920591a8817061a/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/772c12465a99490eb920591a8817061a/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/85cce1c999414963a2cfc14e29e140ce/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/85cce1c999414963a2cfc14e29e140ce/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/8bfbc633aac94ec89a2080da013e62ba/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8bfbc633aac94ec89a2080da013e62ba/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/8e0abfc62f9341328b62c1b0dd93ccc8/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8e0abfc62f9341328b62c1b0dd93ccc8/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/8f0764fe65b54b808f7024e18edc00c6/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8f0764fe65b54b808f7024e18edc00c6/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/93014c83c7d74c62ac7d1c2f0b86977a/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/93014c83c7d74c62ac7d1c2f0b86977a/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/a14417d3540d41e9af2a76f67af0900e/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/a14417d3540d41e9af2a76f67af0900e/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/a16b4a2fbd564e7a85d22e03f2576547/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/a16b4a2fbd564e7a85d22e03f2576547/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/bc81311a011d434c902ba5db4181f1da/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/bc81311a011d434c902ba5db4181f1da/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/befb6363958441568aacfead858dd6af/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/befb6363958441568aacfead858dd6af/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/c12cb18a59884b95a943463274d6afe6/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/c12cb18a59884b95a943463274d6afe6/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/ccb2a877f5bd4171b7acd88569ff89e1/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/ccb2a877f5bd4171b7acd88569ff89e1/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/f01b07a36a8c441d8f446fc22cbf6f37/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/f01b07a36a8c441d8f446fc22cbf6f37/meta.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlruns/0/fd64d585806241948daa8468f92c4495/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/fd64d585806241948daa8468f92c4495/meta.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -171,15 +149,16 @@
       <workItem from="1579371568718" duration="196000" />
       <workItem from="1579372575924" duration="34000" />
       <workItem from="1579372796325" duration="972000" />
-      <workItem from="1579374684262" duration="16276000" />
+      <workItem from="1579374684262" duration="16312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24573000" />
+    <option name="totallyTimeSpent" value="24609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="103" y="40" width="1453" height="961" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28844792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -242,8 +221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

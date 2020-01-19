@@ -140,7 +140,7 @@ def preprocess(df):
 if __name__ == "__main__":
 
     data = pd.read_csv("titanic.csv")
-    training_experiments = 20
+    training_experiments = 1
 
     x_train, x_validation, y_train, y_validation = preprocess(data)
 

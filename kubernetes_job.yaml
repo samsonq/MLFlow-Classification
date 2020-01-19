@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "Classifier Platform"
+  namespace: mlflow
+spec:
+  ttlSecondsAfterFinished: 100
+  backoffLimit: 0
+  template:
+    spec:
+      containers:
+      - name: "Classifier Platform"
+        image: "samsonqian/Documents/GitHub/MLFlow-Apple"
+        command: ["python main.py"]
+      resources:
+        limits:
+          memory: 512Mi
+        requests:
+          memory: 256Mi
+      restartPolicy: Never

@@ -1,0 +1,12 @@
+name: Classifier Platform
+
+docker_env:
+  image:  mlflow-docker-example
+
+entry_points:
+  main:
+    parameters:
+      learning_rate: {type: float, default: 0.01}
+      batch_size: {type: int, default: 128}
+      epochs: {type: int, default: 20}
+    command: "python main.py --learning_rate {learning_rate} --batch_size {batch_size} --epochs {epochs}"

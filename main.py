@@ -12,75 +12,70 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.optimizers import RMSprop
 
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.model_selection import train_test_split
+
 import warnings
 warnings.filterwarnings("ignore")
 
 
-def recall(true, pred):
-    """
-
-    :param true:
-    :param pred:
-    :return:
-    """
-    true_positives = K.sum(K.round(K.clip(true * pred, 0, 1)))
-    possible_positives = K.sum(K.round(K.clip(true, 0, 1)))
-    return true_positives/(possible_positives + K.epsilon())
-
-
-def precision(true, pred):
-    """
-
-    :param true:
-    :param pred:
-    :return:
-    """
-    true_positives = K.sum(K.round(K.clip(true * pred, 0, 1)))
-    predicted_positives = K.sum(K.round(K.clip(pred, 0, 1)))
-    return true_positives/(predicted_positives + K.epsilon())
-
-
-def f1(true, pred):
-    """
-
-    :param true:
-    :param pred:
-    :return:
-    """
-    precision_val = precision(true, pred)
-    recall_val = recall(true, pred)
-    return 2 * ((precision_val * recall_val)/(precision_val + recall_val + K.epsilon()))
-
-
-def random_data(size):
-    """
-
-    :param size:
-    :return:
-    """
-    return np.random.random((size, 20)), np.random.randint(2, size=(size, 1))
-
-
 def binary_model(dim):
     """
-
+    Builds a simple binary classification neural network
     :param dim: dimensions of the input into model
-    :return:
+    :return: binary classification model
     """
     mdl = Sequential([
         Dense(64, activation="relu", input_dim=dim),
-        Dropout(0.2),
         Dense(64, activation="relu"),
-        Dropout(0.2),
+        Dropout(0.1),
         Dense(1, activation="sigmoid")
     ])
     return mdl
 
 
-def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
+def recall(y_true, y_pred):
     """
 
-    :param mdl:
+    :param y_true:
+    :param y_pred:
+    :return:
+    """
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
+    return true_positives/(possible_positives + K.epsilon())
+
+
+def precision(y_true, y_pred):
+    """
+
+    :param y_true:
+    :param y_pred:
+    :return:
+    """
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
+    return true_positives/(predicted_positives + K.epsilon())
+
+
+def f1(y_true, y_pred):
+    """
+
+    :param y_true:
+    :param y_pred:
+    :return:
+    """
+    precision_val = precision(y_true, y_pred)
+    recall_val = recall(y_true, y_pred)
+    return 2 * ((precision_val * recall_val)/(precision_val + recall_val + K.epsilon()))
+
+
+def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
+    """
+    Train and evaluate the model based on training and validation data and outputs the accuracy,
+    recall, precision, and f1 score at each epoch. Logs inputted hyperparameters and metrics
+    into MLFlow ui to visualize.
+    :param mdl: model to train and log metrics
     :param train_x: training features
     :param train_y: training labels
     :param valid_x: validation features
@@ -88,7 +83,7 @@ def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
     :param p1: hyperparameter 1 (learning rate)
     :param p2: hyperparameter 2 (batch size)
     :param p3: hyperparameter 3 (epochs)
-    :return:
+    :return: history of metrics from training
     """
     mdl.compile(optimizer=RMSprop(lr=p1),
                 loss="binary_crossentropy",
@@ -109,19 +104,53 @@ def train_and_log(mdl, train_x, train_y, valid_x, valid_y, p1, p2, p3):
     return hist.history
 
 
+def preprocessing(df):
+    """
+    Preprocess and clean data to transform into training and validation sets.
+    :param df: dataframe to prepare
+    :returns: tensors of training and validation data
+    """
+    df.drop(labels=["Name", "Cabin", "Ticket"], axis=1, inplace=True)
+    df["Age"].fillna(df["Age"].median(), inplace=True)
+    df["Embarked"].fillna("S", inplace=True)
+
+    le_sex = LabelEncoder()
+    le_sex.fit(df["Sex"])
+    encoded_sex_training = le_sex.transform(df["Sex"])
+    df["Sex"] = encoded_sex_training
+
+    le_embarked = LabelEncoder()
+    le_embarked.fit(df["Embarked"])
+    encoded_embarked_training = le_embarked.transform(df["Embarked"])
+    df["Embarked"] = encoded_embarked_training
+
+    scale = StandardScaler()
+
+    ages_train = np.array(df["Age"]).reshape(-1, 1)
+    fares_train = np.array(df["Fare"]).reshape(-1, 1)
+    df["Age"] = scale.fit_transform(ages_train)
+    df["Fare"] = scale.fit_transform(fares_train)
+
+    features = df.drop(labels=["PassengerId", "Survived"], axis=1)  # define training features set
+    labels = df["Survived"]  # define training label set
+    train_x, valid_x, train_y, valid_y = train_test_split(features, labels, test_size=0.2, random_state=0)
+    return train_x.to_numpy(), valid_x.to_numpy(), train_y.to_numpy(), valid_y.to_numpy()
+
+
 if __name__ == "__main__":
 
     data = pd.read_csv("data.csv")
     training_experiments = 20
 
+    x_train, x_validation, y_train, y_validation = preprocessing(data)
+
     for iteration in range(1, training_experiments+1):
         print("Training iteration: " + str(iteration))
-        P1 = random.random()   # learning rate
-        P2 = random.randint(1, 1000)   # batch size
-        P3 = random.randint(1, 50)     # epochs
+        P1 = random.uniform(0.000001, 0.1)   # learning rate
+        P2 = random.randint(10, 500)   # batch size
+        P3 = random.randint(10, 50)     # epochs
 
-        #x_train, y_train = random_data(1000)
-        #x_validation, y_validation = random_data(300)
         model = binary_model(x_train.shape[1])
         history = train_and_log(model, x_train, y_train, x_validation, y_validation, P1, P2, P3)
-        print("Training iteration completed.")
+        print(history)
+        print("Training iteration " + str(iteration) + " completed.")

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/samsonqian/Documents/GitHub/MLFlow-Apple/mlruns/0/f5310be730674dd1848f569d401bb6ea/artifacts
+end_time: 1579415523071
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+name: ''
+run_id: f5310be730674dd1848f569d401bb6ea
+run_uuid: f5310be730674dd1848f569d401bb6ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1579415521063
+status: 3
+tags: []
+user_id: samsonqian

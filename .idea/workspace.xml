@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa37b913-472b-48ea-af6a-e0887c6f99f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/08ec555e065c4df8a1096833dfbaab67/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/08ec555e065c4df8a1096833dfbaab67/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/288d568a46db48b2bdf3fecf76096e3b/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/288d568a46db48b2bdf3fecf76096e3b/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/2ee1abda975345f7818cde1701230862/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/2ee1abda975345f7818cde1701230862/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/2ef79d9b3b774a1ab507e6c16397a10c/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/2ef79d9b3b774a1ab507e6c16397a10c/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/3db4cc35e6be4e3ca5c1e9ef7e9a15d3/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/3db4cc35e6be4e3ca5c1e9ef7e9a15d3/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/5ffb38cedbc549eba93094fccedf8caf/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/5ffb38cedbc549eba93094fccedf8caf/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/772c12465a99490eb920591a8817061a/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/772c12465a99490eb920591a8817061a/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/85cce1c999414963a2cfc14e29e140ce/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/85cce1c999414963a2cfc14e29e140ce/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/8bfbc633aac94ec89a2080da013e62ba/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8bfbc633aac94ec89a2080da013e62ba/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/8e0abfc62f9341328b62c1b0dd93ccc8/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8e0abfc62f9341328b62c1b0dd93ccc8/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/8f0764fe65b54b808f7024e18edc00c6/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/8f0764fe65b54b808f7024e18edc00c6/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/93014c83c7d74c62ac7d1c2f0b86977a/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/93014c83c7d74c62ac7d1c2f0b86977a/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/a14417d3540d41e9af2a76f67af0900e/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/a14417d3540d41e9af2a76f67af0900e/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/a16b4a2fbd564e7a85d22e03f2576547/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/a16b4a2fbd564e7a85d22e03f2576547/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/bc81311a011d434c902ba5db4181f1da/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/bc81311a011d434c902ba5db4181f1da/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/befb6363958441568aacfead858dd6af/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/befb6363958441568aacfead858dd6af/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/c12cb18a59884b95a943463274d6afe6/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/c12cb18a59884b95a943463274d6afe6/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/ccb2a877f5bd4171b7acd88569ff89e1/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/ccb2a877f5bd4171b7acd88569ff89e1/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/f01b07a36a8c441d8f446fc22cbf6f37/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/f01b07a36a8c441d8f446fc22cbf6f37/meta.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mlruns/0/fd64d585806241948daa8468f92c4495/meta.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/mlruns/0/fd64d585806241948daa8468f92c4495/meta.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="124" column="22" lean-forward="true" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+            <state relative-caret-position="358">
+              <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -48,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="57" />
+    <option name="x" value="103" />
+    <option name="y" value="40" />
     <option name="width" value="1453" />
     <option name="height" value="961" />
   </component>
@@ -151,21 +171,21 @@
       <workItem from="1579371568718" duration="196000" />
       <workItem from="1579372575924" duration="34000" />
       <workItem from="1579372796325" duration="972000" />
-      <workItem from="1579374684262" duration="8219000" />
+      <workItem from="1579374684262" duration="16276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16516000" />
+    <option name="totallyTimeSpent" value="24573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="57" width="1453" height="961" extended-state="0" />
+    <frame x="103" y="40" width="1453" height="961" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28844792" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969433" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893692" weight="0.3475259" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -188,7 +208,7 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MLFlow_Apple$main.coverage" NAME="main Coverage Results" MODIFIED="1579398058090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MLFlow_Apple$main.coverage" NAME="main Coverage Results" MODIFIED="1579419780111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/output.txt" />
@@ -205,15 +225,25 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="-10656">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="124" column="22" lean-forward="true" selection-start-line="124" selection-start-column="22" selection-end-line="124" selection-end-column="22" />
+        <state relative-caret-position="358">
+          <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

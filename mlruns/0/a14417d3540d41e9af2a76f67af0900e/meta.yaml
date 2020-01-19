@@ -2,7 +2,7 @@ artifact_uri: file:///Users/samsonqian/Documents/GitHub/MLFlow-Apple/mlruns/0/a1
 end_time: 1579398116607
 entry_point_name: ''
 experiment_id: '0'
-lifecycle_stage: active
+lifecycle_stage: deleted
 name: ''
 run_id: a14417d3540d41e9af2a76f67af0900e
 run_uuid: a14417d3540d41e9af2a76f67af0900e

@@ -1,5 +1,0 @@
-{
-  "kube-context": "docker-desktop",
-  "repository-uri": "samsonqian/Documents/GitHub/MLFlow-Apple",
-  "kube-job-template-path": "/Users/samsonqian/Documents/GitHub/MLFlow-Apple/kubernetes_job.yaml"
-}

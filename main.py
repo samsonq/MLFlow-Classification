@@ -6,7 +6,6 @@ import pandas as pd
 import random
 
 import keras
-import tensorflow as tf
 from keras import backend as K
 from keras.models import Sequential
 from keras.layers import Dense, Dropout

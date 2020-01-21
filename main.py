@@ -32,7 +32,7 @@ def binary_model(dim):
 
 def recall(y_true, y_pred):
     """
-    Calculates recall metric through true positive rates based on
+    Calculates recall metric through false positive rates based on
     true values and predictions.
     :param y_true: true labels
     :param y_pred: predicted labels
@@ -45,7 +45,7 @@ def recall(y_true, y_pred):
 
 def precision(y_true, y_pred):
     """
-    Calculates precision metric through true positive rates based on
+    Calculates precision metric through false negative rates based on
     true values and predictions.
     :param y_true: true labels
     :param y_pred: predicted labels
@@ -139,7 +139,7 @@ def preprocess(df):
 if __name__ == "__main__":
 
     data = pd.read_csv("titanic.csv")
-    training_experiments = 1
+    training_experiments = 20
 
     x_train, x_validation, y_train, y_validation = preprocess(data)
 

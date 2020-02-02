@@ -1,13 +1,12 @@
-name: Apple-MLFlow
+name: apple-mlflow
 
 docker_env:
-  image: Apple-MLFlow-Project
+  image: apple-mlflow-project
 
-'''
 entry_points:
   main:
     parameters:
-      alpha: float
-      l1_ratio: {type: float, default: 0.1}
-    command: "python train.py --alpha {alpha} --l1-ratio {l1_ratio}"
-'''
+      P1: float
+      P2: int
+      P3: int
+    command: "python main.py --P1 {P1} --P2 {P2} --P3 {P3}"

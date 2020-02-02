@@ -1,3 +1,5 @@
+import sys
+
 import mlflow
 import mlflow.keras
 
@@ -145,9 +147,12 @@ if __name__ == "__main__":
 
     for iteration in range(1, training_experiments+1):
         print("Training iteration: " + str(iteration))
-        P1 = random.uniform(0.000001, 0.1)   # learning rate
-        P2 = random.randint(10, 500)   # batch size
-        P3 = random.randint(10, 50)     # epochs
+        #P1 = random.uniform(0.000001, 0.1)   learning rate
+        #P2 = random.randint(10, 500)   batch size
+        #P3 = random.randint(10, 50)     epochs
+        P1 = sys.argv[1]
+        P2 = sys.argv[2]
+        P3 = sys.argv[3]
 
         model = binary_model(x_train.shape[1])
         history = train_and_log(model, x_train, y_train, x_validation, y_validation, P1, P2, P3)

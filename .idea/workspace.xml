@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fa37b913-472b-48ea-af6a-e0887c6f99f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/titanic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/titanic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +38,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/Desktop" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/data" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,6 +111,9 @@
       <workItem from="1586676840472" duration="64000" />
       <workItem from="1587879222308" duration="329000" />
       <workItem from="1592865233288" duration="3000" />
+      <workItem from="1601196719188" duration="34000" />
+      <workItem from="1605141954222" duration="689000" />
+      <workItem from="1605143065526" duration="998000" />
     </task>
     <servers />
   </component>

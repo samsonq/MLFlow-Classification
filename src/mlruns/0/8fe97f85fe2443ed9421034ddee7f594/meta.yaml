@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/samsonqian/Documents/GitHub/MLFlow-Classification/src/mlruns/0/8fe97f85fe2443ed9421034ddee7f594/artifacts
+end_time: 1605143981527
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 8fe97f85fe2443ed9421034ddee7f594
+run_uuid: 8fe97f85fe2443ed9421034ddee7f594
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1605143971320
+status: 3
+tags: []
+user_id: samsonqian

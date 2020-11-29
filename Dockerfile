@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt install -y python3
 
 COPY requirements.txt /MLFlow-Classification/requirements.txt
-RUN pip3 install -r /MLFlow-Classification/requirements.txt
+RUN pip install -r /MLFlow-Classification/requirements.txt
 
 WORKDIR /MLFlow-Classification/src
 CMD python3 main.py
